@@ -1,0 +1,18 @@
+{
+    "name": "pf2e-explorationActivities",
+    "title": "PF2e Exploration Activities",
+    "description": "Exploration Activity Macro",
+    "author": "IcyLemon",
+    "version": "1.0.0",
+    "minimumCoreVersion": "0.7.0",
+    "compatibleCoreVersion": "0.8.7",
+    "esmodules": [
+        "scripts/init.js",
+        "scripts/scripts.js"
+    ],
+    "styles": [ "./pf2e-explorationActivities.css" ],
+    "socket": true,
+    "url": "https://github.com/IcyLemonZ/pf2e-explorationActivities",
+    "manifest": "",
+    "download": ""
+}

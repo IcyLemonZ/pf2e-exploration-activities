@@ -1,0 +1,113 @@
+#pf2e-explorationActivity-scripts-content {
+    padding: 5px; 
+    margin: auto; 
+    width: 95%;
+}
+
+#pf2e-explorationActivity-chooseskill {
+    padding: 8px 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+#pf2e-explorationActivity-preset {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+}
+
+#pf2e-explorationActivity-stopcritfail {
+    padding-bottom: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+}
+
+#pf2e-explorationActivity-customDC {
+    width: 30px
+}
+
+#pf2e-explorationActivity-successes {
+    width: 30px
+}
+
+#pf2e-explorationActivity-bonuses {
+    width: 30px
+}
+
+#pf2e-explorationActivity-gm_lockset-content2 {
+    text-align: center
+}
+
+.pf2e-explorationActivity-scripts-numbercritsuccess {
+    color: green; 
+    text-decoration: underline
+}
+
+.pf2e-explorationActivity-scripts-numbercritfail {
+    color: red;
+    text-decoration: underline
+}
+
+.pf2e-explorationActivity-scripts-numbersuccess {
+    color: green; 
+}
+
+.pf2e-explorationActivity-scripts-numberfail {
+    color: black; 
+}
+
+.pf2e-explorationActivity-scripts-wordfail {
+    font-weight: bold;
+}
+
+.pf2e-explorationActivity-scripts-wordsuccess {
+    color: green; 
+    font-weight: bold
+}
+
+.pf2e-explorationActivity-scripts-wordcritsuccess {
+    color: green; 
+    font-weight: bold; 
+    text-decoration: underline
+}
+
+.pf2e-explorationActivity-scripts-wordcritfail {
+    color: red; 
+    font-weight: bold;
+    text-decoration: underline
+}
+
+.pf2e-explorationActivity-tooltip {
+    display: inline-block;
+    position: relative;
+}
+
+.pf2e-explorationActivity-tooltip .pf2e-explorationActivity-tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    background-image: url("/ui/parchment.jpg");
+    background-repeat: repeat;
+    /* background-color: white; */
+    border-style: solid;
+    border-radius: 6px;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+    width: 70px;
+    bottom: 100%;
+    /* left: 100%; */
+    margin-left: -35px;
+    color: black;
+    text-decoration: none;
+}
+
+.pf2e-explorationActivity-tooltip:hover .pf2e-explorationActivity-tooltiptext {
+    visibility: visible;
+}
