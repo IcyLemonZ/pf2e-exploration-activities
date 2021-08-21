@@ -1,17 +1,11 @@
-// Macro for the GM to run to set the DC and number of successes for the skill challenge
-// Can pick from a set of published combos (based off Locks) or create a custom one
+const tokens = canvas.tokens.controlled.filter((t) => ['character', 'npc', 'familiar'].includes(t.actor.data.type));
 
-if (!token) {
-  ui.notifications.error("Please select a token.")
-  return;
+if (tokens.length === 0) {
+    ui.notifications.error(`You must select at least one npc/pc token`);
+} else {
+    tokens.map((p) => p.actor).forEach((actor) => 
+    game.socket.emit('module.pf2e-explorationActivities', {
+      operation: 'playerExplorationActivity',
+      actor
+  }));
 }
-
-if (canvas.tokens.controlled.length > 1) {
-  ui.notifications.error("Please select only one token.")
-  return;
-}
-
-game.socket.emit('module.pf2e-explorationActivity', {
-  operation: 'playerExplorationActivity',
-  actor
-});

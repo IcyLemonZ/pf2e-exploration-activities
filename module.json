@@ -13,6 +13,6 @@
     "styles": [ "./pf2e-explorationActivities.css" ],
     "socket": true,
     "url": "https://github.com/IcyLemonZ/pf2e-explorationActivities",
-    "manifest": "",
+    "manifest": "https://raw.githubusercontent.com/IcyLemonZ/pf2e-explorationActivities/main/module.json",
     "download": ""
 }
