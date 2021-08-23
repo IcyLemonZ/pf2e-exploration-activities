@@ -1,5 +1,5 @@
 {
-    "name": "pf2e-explorationActivities",
+    "name": "pf2e-exploration-activities",
     "title": "PF2e Exploration Activities",
     "description": "Exploration Activity Macro",
     "author": "IcyLemon",
@@ -17,8 +17,9 @@
             "path": "./packs/pf2e-exploration-activities.db",
             "entity": "Macro"
     }],
+    "systems": ["pf2e"],
     "socket": true,
-    "url": "https://github.com/IcyLemonZ/pf2e-explorationActivities",
-    "manifest": "https://raw.githubusercontent.com/IcyLemonZ/pf2e-explorationActivities/main/module.json",
-    "download": "https://github.com/IcyLemonZ/pf2e-explorationActivities/archive/refs/tags/v1.0.0.zip"
+    "url": "https://github.com/IcyLemonZ/pf2e-exploration-activities",
+    "manifest": "https://raw.githubusercontent.com/IcyLemonZ/pf2e-exploration-activities/main/module.json",
+    "download": "https://github.com/IcyLemonZ/pf2e-exploration-activities/archive/refs/tags/v1.0.0.zip"
 }

@@ -9,7 +9,7 @@ if (tokens.length === 0) {
     }; 
     ChatMessage.create(chatData, {}); 
     tokens.map((p) => p.actor).forEach((actor) => 
-    game.socket.emit('module.pf2e-explorationActivities', {
+    game.socket.emit('module.pf2e-exploration-activities', {
       operation: 'playerExplorationActivity',
       actor
   }));
