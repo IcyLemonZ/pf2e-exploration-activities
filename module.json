@@ -4,8 +4,8 @@
     "description": "Exploration Activity Macro",
     "author": "IcyLemon",
     "version": "1.0.0",
-    "minimumCoreVersion": "0.7.0",
-    "compatibleCoreVersion": "0.8.7",
+    "minimumCoreVersion": "0.8.0",
+    "compatibleCoreVersion": "0.8.8",
     "esmodules": [
         "scripts/init.js",
         "scripts/scripts.js"
@@ -17,9 +17,8 @@
             "path": "./packs/pf2e-exploration-activities.db",
             "entity": "Macro"
     }],
-    "styles": [ "./pf2e-explorationActivities.css" ],
     "socket": true,
     "url": "https://github.com/IcyLemonZ/pf2e-explorationActivities",
     "manifest": "https://raw.githubusercontent.com/IcyLemonZ/pf2e-explorationActivities/main/module.json",
-    "download": ""
+    "download": "https://github.com/IcyLemonZ/pf2e-explorationActivities/archive/refs/tags/v0.5.zip"
 }
