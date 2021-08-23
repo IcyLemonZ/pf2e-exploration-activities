@@ -20,5 +20,5 @@
     "socket": true,
     "url": "https://github.com/IcyLemonZ/pf2e-explorationActivities",
     "manifest": "https://raw.githubusercontent.com/IcyLemonZ/pf2e-explorationActivities/main/module.json",
-    "download": "https://github.com/IcyLemonZ/pf2e-explorationActivities/archive/refs/tags/v0.5.zip"
+    "download": "https://github.com/IcyLemonZ/pf2e-explorationActivities/archive/refs/tags/v1.0.0.zip"
 }
