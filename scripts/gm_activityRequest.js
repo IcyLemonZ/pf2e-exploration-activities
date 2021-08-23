@@ -1,5 +1,5 @@
 // Macro for GM to request exploration activities from selected players
-const tokens = canvas.tokens.controlled.filter((t) => ['character', 'npc', 'familiar'].includes(t.actor.data.type));
+const tokens = canvas.tokens.controlled.filter((t) => ['character'].includes(t.actor.data.type));
 
 if (tokens.length === 0) {
     ui.notifications.error(`You must select at least one pc token`);
