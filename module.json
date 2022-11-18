@@ -3,11 +3,10 @@
     "title": "PF2e Exploration Activities",
     "description": "Exploration Activity Macro",
     "author": "IcyLemon",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "compatibility": {
       "minimum": "10",
-      "verified": "10.290",
-      "maximum": "10"
+      "verified": "10"
     },
     "esmodules": [
         "scripts/init.js",
@@ -24,5 +23,5 @@
     "socket": true,
     "url": "https://github.com/IcyLemonZ/pf2e-exploration-activities",
     "manifest": "https://raw.githubusercontent.com/IcyLemonZ/pf2e-exploration-activities/main/module.json",
-    "download": "https://github.com/IcyLemonZ/pf2e-exploration-activities/archive/refs/tags/v1.1.0.zip"
+    "download": "https://github.com/IcyLemonZ/pf2e-exploration-activities/archive/refs/tags/v1.1.1.zip"
 }
