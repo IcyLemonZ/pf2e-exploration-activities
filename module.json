@@ -18,7 +18,16 @@
       "type": "Macro"
     }
   ],
-  "systems": ["pf2e"],
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "compatibility": {
+          "minimum": "4.0.0"
+        }
+      }
+    ]
+  },
   "socket": true,
   "url": "https://github.com/IcyLemonZ/pf2e-exploration-activities",
   "manifest": "https://github.com/MarkPearce/pf2e-exploration-activities/releases/latest/download/module.json",
