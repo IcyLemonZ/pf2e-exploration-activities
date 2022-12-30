@@ -15,7 +15,7 @@
       "label": "PF2E Exploration Activities",
       "system": "pf2e",
       "path": "./packs/pf2e-exploration-activities.db",
-      "entity": "Macro"
+      "type": "Macro"
     }
   ],
   "systems": ["pf2e"],
