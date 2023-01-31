@@ -1,7 +1,18 @@
-// This function is run on the player's end, by the owner(s) of the token(s) selected by the
-// GM when the gm_exploration activity macro was run.
+const tokens = canvas.tokens.controlled.filter((t) =>
+  ['character'].includes(t.actor.data.type),
+)
 
-export function explorationActivity(actor, tokenID) {
+if (tokens.length === 0) {
+  ui.notifications.error(`You must select at least one pc token`)
+} else {
+  tokens.forEach((token) => {
+    let actor = token.actor
+    let tokenID = token.id
+    explorationActivity(actor, tokenID)
+  })
+}
+
+function explorationActivity(actor, tokenID) {
   let token = canvas.tokens.get(tokenID)
   let content = ''
   let selectedActivity
@@ -91,7 +102,7 @@ export function explorationActivity(actor, tokenID) {
         },
       },
       cancel: {
-        icon: "<i class='fas fa-lock-times'></i>",
+        icon: '',
         label: 'Cancel',
         callback: () => {
           selectedActivity = '<h3>I will do nothing in particular.</h3>'
@@ -143,12 +154,11 @@ export function explorationActivity(actor, tokenID) {
         'Compendium.pf2e-exploration-effects.exploration-effects.XiVLHjg5lQVMX8Fj',
       Track:
         'Compendium.pf2e-exploration-effects.exploration-effects.OcCXjJab7rSR3mDf',
-      Unspecified:
-        'Compendium.pf2e-exploration-effects.exploration-effects.CcyA2CzeaTBWHNHP',
     }
 
     let effect = explorationEffects[effectName]
     if (effect != undefined) {
+      console.log('the effect is ' + effect)
       let item = (await fromUuid(effect)).toObject()
       await token.actor.createEmbeddedDocuments('Item', [item])
     }

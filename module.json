@@ -1,27 +1,35 @@
 {
-    "name": "pf2e-exploration-activities",
-    "title": "PF2e Exploration Activities",
-    "description": "Exploration Activity Macro",
-    "author": "IcyLemon",
-    "version": "1.1.1",
-    "compatibility": {
-      "minimum": "10",
-      "verified": "10"
-    },
-    "esmodules": [
-        "scripts/init.js",
-        "scripts/scripts.js"
-    ],
-    "packs": [{
-            "name": "pf2e-exploration-activities",
-            "label": "PF2E Exploration Activities",
-            "system": "pf2e",
-            "path": "./packs/pf2e-exploration-activities.db",
-            "entity": "Macro"
-    }],
-    "systems": ["pf2e"],
-    "socket": true,
-    "url": "https://github.com/IcyLemonZ/pf2e-exploration-activities",
-    "manifest": "https://raw.githubusercontent.com/IcyLemonZ/pf2e-exploration-activities/main/module.json",
-    "download": "https://github.com/IcyLemonZ/pf2e-exploration-activities/archive/refs/tags/v1.1.1.zip"
+  "name": "pf2e-exploration-activities",
+  "title": "PF2e Exploration Activities",
+  "description": "Exploration Activity Macros, linked to Exploration Effects",
+  "authors": [{ "name": "IcyLemon" }],
+  "version": "1.2.1",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10"
+  },
+  "esmodules": ["scripts/init.js", "scripts/scripts.js"],
+  "packs": [
+    {
+      "name": "pf2e-exploration-activities",
+      "label": "PF2E Exploration Activities",
+      "path": "./packs/pf2e-exploration-activities.db",
+      "type": "Macro",
+      "private": false
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "compatibility": {
+          "minimum": "4.0.0"
+        }
+      }
+    ]
+  },
+  "socket": true,
+  "url": "https://github.com/IcyLemonZ/pf2e-exploration-activities",
+  "manifest": "https://github.com/MarkPearce/pf2e-exploration-activities/releases/latest/download/module.json",
+  "download": "https://github.com/MarkPearce/pf2e-exploration-activities/releases/latest/download/pf2e-exploration-activities.zip"
 }
