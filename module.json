@@ -1,9 +1,9 @@
 {
-  "name": "pf2e-exploration-activities",
+  "id": "pf2e-exploration-activities",
   "title": "PF2e Exploration Activities",
   "description": "Exploration Activity Macros, linked to Exploration Effects",
   "authors": [{ "name": "IcyLemon" }],
-  "version": "1.2.1",
+  "version": "1.2.2",
   "compatibility": {
     "minimum": "10",
     "verified": "10"
