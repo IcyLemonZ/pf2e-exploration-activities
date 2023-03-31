@@ -87,6 +87,7 @@ export function explorationActivity(actor, tokenID) {
           selectedActivity =
             '<h3>I will <b>' + html.find('#activity')[0].value + '</b></h3>'
           generateChat(actor, selectedActivity)
+          removeOtherEffects(actor)
           applyEffect(actor, html.find('#activity')[0].value)
         },
       },
@@ -116,41 +117,53 @@ export function explorationActivity(actor, tokenID) {
     await ChatMessage.create(chatData, {})
   }
 
+  const explorationEffects = {
+    'Avoid Notice':
+      'Compendium.pf2e-exploration-effects.exploration-effects.N8vpuGy4TzU10y8E',
+    'Cover Tracks':
+      'Compendium.pf2e-exploration-effects.exploration-effects.F6vJYLZTWDpnrnCZ',
+    Defend:
+      'Compendium.pf2e-exploration-effects.exploration-effects.GYOyFj4ziZX060rZ',
+    'Detect Magic':
+      'Compendium.pf2e-exploration-effects.exploration-effects.OjRHL0B4WAUUQc13',
+    'Follow the Expert':
+      'ompendium.pf2e-exploration-effects.exploration-effects.V347nnVBGDrVWh7k',
+    Hustle:
+      'Compendium.pf2e-exploration-effects.exploration-effects.vNUrKvoOSvEnqzhM',
+    Investigate:
+      'Compendium.pf2e-exploration-effects.exploration-effects.tDsgl8YmhZbx2May',
+    'Repeat a Spell':
+      'Compendium.pf2e-exploration-effects.exploration-effects.kh1QdKkvbNZ0qBsQ',
+    Scout:
+      'Compendium.pf2e-exploration-effects.exploration-effects.mGFBHM1lvHNZ9BsH',
+    Search:
+      'Compendium.pf2e-exploration-effects.exploration-effects.XiVLHjg5lQVMX8Fj',
+    Track:
+      'Compendium.pf2e-exploration-effects.exploration-effects.OcCXjJab7rSR3mDf',
+    Unspecified:
+      'Compendium.pf2e-exploration-effects.exploration-effects.CcyA2CzeaTBWHNHP',
+  }
+
   //used to apply effect
   async function applyEffect(actor, selectedEffect) {
     const re = /\{(.*)\}/i
     let effectName = selectedEffect.match(re)[1]
-    const explorationEffects = {
-      'Avoid Notice':
-        'Compendium.pf2e-exploration-effects.exploration-effects.N8vpuGy4TzU10y8E',
-      'Cover Tracks':
-        'Compendium.pf2e-exploration-effects.exploration-effects.F6vJYLZTWDpnrnCZ',
-      Defend:
-        'Compendium.pf2e-exploration-effects.exploration-effects.GYOyFj4ziZX060rZ',
-      'Detect Magic':
-        'Compendium.pf2e-exploration-effects.exploration-effects.OjRHL0B4WAUUQc13',
-      'Follow the Expert':
-        'ompendium.pf2e-exploration-effects.exploration-effects.V347nnVBGDrVWh7k',
-      Hustle:
-        'Compendium.pf2e-exploration-effects.exploration-effects.vNUrKvoOSvEnqzhM',
-      Investigate:
-        'Compendium.pf2e-exploration-effects.exploration-effects.tDsgl8YmhZbx2May',
-      'Repeat a Spell':
-        'Compendium.pf2e-exploration-effects.exploration-effects.kh1QdKkvbNZ0qBsQ',
-      Scout:
-        'Compendium.pf2e-exploration-effects.exploration-effects.mGFBHM1lvHNZ9BsH',
-      Search:
-        'Compendium.pf2e-exploration-effects.exploration-effects.XiVLHjg5lQVMX8Fj',
-      Track:
-        'Compendium.pf2e-exploration-effects.exploration-effects.OcCXjJab7rSR3mDf',
-      Unspecified:
-        'Compendium.pf2e-exploration-effects.exploration-effects.CcyA2CzeaTBWHNHP',
-    }
-
     let effect = explorationEffects[effectName]
     if (effect != undefined) {
       let item = (await fromUuid(effect)).toObject()
       await token.actor.createEmbeddedDocuments('Item', [item])
+    }
+  }
+
+  //removes other exploration activities
+  async function removeExplorationEffects(actor) {
+    for (const effectName of Object.keys(explorationEffects)) {
+      for (const fx of token.actor.itemTypes.effect) {
+        if (fx.name == effectName) {
+          console.log('removing ' + fx.name)
+          await fx.delete()
+        }
+      }
     }
   }
 }
