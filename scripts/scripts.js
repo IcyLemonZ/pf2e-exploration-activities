@@ -77,7 +77,7 @@ export function explorationActivity(actor, tokenID) {
   content += `</select></div>`
 
   let d = new Dialog({
-    title: 'Exploration Activity',
+    title: `Exploration Activity: ${token.name}`,
     content,
     buttons: {
       select: {
